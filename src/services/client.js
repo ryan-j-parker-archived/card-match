@@ -10,3 +10,20 @@ export function checkError({ data, error }) {
   }
   return data;
 }
+
+export async function fetchMessages(from, to) {
+  const response = await client.from('messages').select('*').range(from, to).order('timestamp', { ascending: false });
+  return checkError(response);
+}
+
+export async function createMessage(username, text) {
+  const response = await client.from('messages').insert({ username, text });
+  return checkError(response);
+}
+
+// export async function realtimeMessages(handler) {
+//   const response = await (await client.from('messages')).count('INSERT', (payload) => {
+//     handler(payload.new);
+//   }).subscribe();
+//   return checkError(response);
+// }

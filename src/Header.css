@@ -1,0 +1,12 @@
+.header {
+    height: 3rem;
+    background-color: rgb(49, 49, 49);
+    color: orange;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.active {
+    color: purple;
+}

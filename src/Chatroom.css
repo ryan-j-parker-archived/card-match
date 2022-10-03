@@ -1,0 +1,17 @@
+.messages {
+    height: 600px;
+    background-color: rgb(61, 61, 61);
+    color: white;
+    width: calc(100vw - 6rem);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.squawk {
+    position: fixed;
+    top: 80%;
+    left: 80%;
+    transform: translate(-45%, -35%);
+}
